@@ -27,13 +27,6 @@ A polished full-stack Todo application aligned with the **Maxiphy Full-Stack Ass
 
 ---
 
-## Screenshots
-
-> _Add your own screenshots or recordings here._
-- Landing page, Todos list with filters/sort, Add/Edit Todo, Profile, Light/Dark modes.
-
----
-
 ## Tech Stack
 
 **Backend**
