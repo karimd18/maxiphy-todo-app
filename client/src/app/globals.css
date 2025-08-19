@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens via CSS variables (light/dark) */
+:root {
+  --bg: 250 250 250;
+  --fg: 17 24 39;
+  --card: 255 255 255;
+  --border: 229 231 235;
+  --muted: 107 114 128;
+  --accent: 0 0 0;
+}
+
+:root[data-theme='dark'] .date-input::-webkit-calendar-picker-indicator,
+.dark .date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2);
+  opacity: 0.9;
+}
+.date-input::-webkit-calendar-picker-indicator { cursor: pointer; }
+
+.dark {
+  --bg: 10 10 12;
+  --fg: 229 231 235;
+  --card: 17 24 39;
+  --border: 38 38 38;
+  --muted: 156 163 175;
+  --accent: 255 255 255;
+}
+
+/* Set global colors with raw CSS (avoid @apply here) */
+html, body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+/* Optional helpers */
+.focus-ring:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgb(var(--bg)),
+    0 0 0 6px rgba(var(--accent), 0.3);
+}
+
+.card {
+  background-color: rgb(var(--card) / 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(var(--border));
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.15);
+  border-radius: 1rem;
+}
